@@ -1,0 +1,400 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* reset css code end*/
+a {
+	text-decoration: none;
+  }
+
+.wrap{	
+	margin:0 auto;
+	max-width: 1024px;	
+}
+
+.header{
+	height:100px;
+	margin: 0 auto;
+	padding: 0px 42px;
+}
+
+.menuBar{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0px;
+}
+
+.menu ul{
+	display:flex;
+	flex-direction: row;
+	justify-content:space-around;		
+	align-items: center; 
+	cursor: pointer;
+}
+
+.menu ul li a{
+	padding: 10px 60px 8px 0px;	
+	color:#3F5D45;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+
+.menu li:last-child {
+	padding-right: 0px;	
+}
+
+.menu ul li img{
+	height: 24px;	
+}
+
+
+.logo img{
+	height:40px;
+	cursor: pointer;
+}
+
+.content{
+	padding: 0px 42px;
+}
+
+.productAD{	
+	text-align: center;	
+}
+
+.productAD img{	
+	vertical-align: top;
+}
+
+.productListArea{
+	display: flex;
+	justify-content:space-between;
+	text-align:center;
+	margin-top: 60px;
+	margin-bottom: 10px;
+
+}
+
+.productMenu{	
+	margin-right:20px;
+}
+
+.productMenu ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+
+}
+
+.productMenu ul li{
+	border: 1px solid #EAF0ED;
+	width: 300px;
+	padding: 16px 0px;
+	color:#3F5D45;
+	font-size: 24px;
+	font-weight: 600;
+	display:block;
+	
+}
+
+.productMenu .active{
+	background-color:#EAF0ED;
+	color:#3F5D45;	
+}
+
+.productMenu ul li:first-child{
+	background-color:#3F5D45;
+	color:white;	
+}
+
+.productMenu ul li:hover{
+	background-color:#EAF0ED;	
+}
+
+.productMenu ul li:first-child:hover{
+	background-color:#3F5D45;	
+}
+
+.productsWrap{	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.productsWrap .product{
+	margin-bottom:20px;
+}
+
+/* 
+.productsWrap .product img{
+	width: 300px;
+	height:315px;
+	background-color: blue;
+	display:block;
+} */
+
+.productsWrap .product .item{
+	width: 300px;
+	height:315px;
+	background-size: 100% 100%;
+	display:block;
+}
+
+.flag{
+	font-family: 'PingFang TC';
+	position:relative ;
+	left:20px;
+	background-color: #3F5D45;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	padding:10px;
+	color:white;
+	letter-spacing: 5px;	
+}
+
+.heartIcon{
+	position:relative ;
+	left:125px;
+	top:-90px;	
+	width:25px;
+	height:25px;
+	cursor: pointer;
+}
+
+.priceArea{	
+	background:white;
+	color: #3F5D45;
+	font-size:20px;
+
+	width: 300px;
+	display:flex;
+	justify-content: center;
+	border: 1px solid #EAF0ED;
+	box-sizing: border-box;
+}
+
+.priceArea div:first-child{
+	border-right: 1px solid #EAF0ED;
+	padding:14px 28px 14px 33px;
+	box-sizing: border-box;
+	font-weight: 500;
+}
+
+.priceArea div:last-child{
+	padding:14px 20px 14px 25px;
+	box-sizing: border-box;
+	font-weight: 600;
+	
+}
+
+.addToCart{
+	background: #EAF0ED 0% 0% no-repeat padding-box;
+	color: #3F5D45;
+	font-size:24px;
+	padding: 16px 90px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.addToCart:hover{
+	background: #3F5D45 0% 0% no-repeat padding-box;
+	color: #EAF0ED;
+	font-size:24px;
+	padding: 16px 90px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.pageChange{
+	margin-bottom:60px;
+}
+
+.pageChange ul{
+	display:flex;
+	justify-content: end;
+}
+
+.pageChange ul li{
+	border: 1px solid #EAF0ED;
+	width: 60px;
+	height:60px;	
+	display:flex;
+	justify-content: center;
+	align-items: center ; 
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.pageChange ul li:hover{
+	border: 1px solid #EAF0ED;
+	color:white;
+	background-color: #3F5D45;
+}
+
+.pageChange ul li.noHover{
+	border: 1px solid #EAF0ED;
+	color:#3F5D45;
+	background-color: white;
+}
+
+.pageChange .active{
+	color:white;
+	background-color: #3F5D45;
+	
+}
+.footer{	
+	background-color: #3F5D45;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.subscribe{	
+	margin: 0 auto;
+	width: 100%;
+	height: 116px;
+	display: flex;
+	justify-content:center ;
+	align-items: center ; 
+}
+
+.subscribe img{ 	
+	height:40px;
+	width: 40px;
+	margin-right:20px;
+}
+
+.footerLogo{
+	font-family: 'PingFang TC';
+	width: 300px;
+	font-size: 24px;
+	color:white;
+}
+
+.mailInput{
+	width:380px;
+	height:56px;
+	background-color: #EAF0ED;
+	display: flex;
+	justify-content:space-between ;
+
+}
+.mailIcon{
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+}
+
+.arrowIcon{ 
+	background-color: #FFE180;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.footerInfo{
+	width: 100%;
+	height: 341px;
+	background-color: #EAF0ED;
+	color:black;
+	display: flex;
+	justify-content: space-between;
+}
+
+.infoLeft{
+	display: flex;
+	flex-direction: column;
+}
+
+.infoLeft div:first-child{
+	width: 277px;
+	padding: 39px 122px 115px 122px;
+
+}
+
+.infoLeft div{
+	width: 277px;
+	padding: 0px 122px 30px 122px;
+	font-family: 'Helvetica Neue';
+	font-size: 16px;
+	color:#3F5D45;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.footerLogo img{
+	width:171px;
+}
+
+.footerIcon img{
+	width:32px;
+}
+
+.infoRight{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: 'Times';
+	padding: 30px 122px;
+	opacity: 1;
+	color:#3F5D45;
+	font-size: 16px;	
+}
+
+
+.infoRight div:first-child{
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	color:#3F5D45;
+	font-size: 23px;
+	font-weight:800;
+	line-height: 1.5;
+}
