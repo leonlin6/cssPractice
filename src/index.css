@@ -49,6 +49,11 @@ table {
 
 
 /* reset css code end*/
+*{
+	box-sizing: border-box;
+}
+
+
 a {
 	text-decoration: none;
   }
@@ -58,46 +63,47 @@ a {
 	max-width: 1024px;	
 }
 
-.header{
-	height:100px;
+.header .menuBar{	
 	margin: 0 auto;
-	padding: 0px 42px;
-}
-
-.menuBar{
 	display: flex;
 	justify-content: space-between;
-	padding: 30px 0px;
+	padding: 30px 42px;
+	align-items: center; 
 }
 
-.menu ul{
+.header ul.menu{
 	display:flex;
 	flex-direction: row;
 	justify-content:space-around;		
 	align-items: center; 
-	cursor: pointer;
 }
 
-.menu ul li a{
-	padding: 10px 60px 8px 0px;	
+.header ul.menu li a{
 	color:#3F5D45;
 	font-size: 16px;
 	font-weight: 600;
+	padding: 10px 30px 8px 30px;	
+	display: inline-block
 }
 
 
-.menu li:last-child {
+.header ul.menu li:not(:last-child):hover{
+	background-color:#EAF0ED;
+}
+
+
+
+.header .menu li:last-child {
 	padding-right: 0px;	
 }
 
-.menu ul li img{
+.header ul.menu li img{
 	height: 24px;	
 }
 
 
 .logo img{
-	height:40px;
-	cursor: pointer;
+	height:40px;	
 }
 
 .content{
@@ -125,22 +131,28 @@ a {
 	margin-right:20px;
 }
 
-.productMenu ul{
-	display: flex;
+.productMenu{
 	flex-direction: column;
 	align-items: center; 
 
 }
 
-.productMenu ul li{
+.productMenu li{
 	border: 1px solid #EAF0ED;
-	width: 300px;
-	padding: 16px 0px;
+
 	color:#3F5D45;
 	font-size: 24px;
 	font-weight: 600;
-	display:block;
-	
+	cursor: pointer;
+}
+
+.productMenu li a{
+	color:#3F5D45;
+	font-size: 24px;
+	font-weight: 600;	
+	width: 300px;
+	padding: 16px 0px;	
+	display: inline-block;
 }
 
 .productMenu .active{
@@ -148,18 +160,18 @@ a {
 	color:#3F5D45;	
 }
 
-.productMenu ul li:first-child{
+.productMenu li:first-child{
 	background-color:#3F5D45;
 	color:white;	
+	width: 300px;
+	padding: 16px 0px;	
+	display: inline-block;
 }
 
-.productMenu ul li:hover{
+.productMenu li:not(:first-child):hover{
 	background-color:#EAF0ED;	
 }
 
-.productMenu ul li:first-child:hover{
-	background-color:#3F5D45;	
-}
 
 .productsWrap{	
 	display: flex;
@@ -185,11 +197,12 @@ a {
 	height:315px;
 	background-size: 100% 100%;
 	display:block;
+	position:relative;
 }
 
 .flag{
 	font-family: 'PingFang TC';
-	position:relative ;
+	position:absolute ;
 	left:20px;
 	background-color: #3F5D45;
 	-webkit-writing-mode: vertical-rl;
@@ -197,15 +210,17 @@ a {
 	padding:10px;
 	color:white;
 	letter-spacing: 5px;	
+	display:inline-block;
 }
 
 .heartIcon{
-	position:relative ;
-	left:125px;
-	top:-90px;	
+	position:absolute ;
+	right:20px;
+	top:20px;	
 	width:25px;
 	height:25px;
 	cursor: pointer;
+	display:inline-block;
 }
 
 .priceArea{	
@@ -217,25 +232,23 @@ a {
 	display:flex;
 	justify-content: center;
 	border: 1px solid #EAF0ED;
-	box-sizing: border-box;
+	
 }
 
 .priceArea div:first-child{
 	border-right: 1px solid #EAF0ED;
 	padding:14px 28px 14px 33px;
-	box-sizing: border-box;
 	font-weight: 500;
 }
 
 .priceArea div:last-child{
 	padding:14px 20px 14px 25px;
-	box-sizing: border-box;
 	font-weight: 600;
 	
 }
 
 .addToCart{
-	background: #EAF0ED 0% 0% no-repeat padding-box;
+	background: #EAF0ED;
 	color: #3F5D45;
 	font-size:24px;
 	padding: 16px 90px;
@@ -244,56 +257,48 @@ a {
 }
 
 .addToCart:hover{
-	background: #3F5D45 0% 0% no-repeat padding-box;
+	background: #3F5D45;
 	color: #EAF0ED;
-	font-size:24px;
-	padding: 16px 90px;
-	font-weight: 600;
-	cursor: pointer;
 }
 
 .pageChange{
 	margin-bottom:60px;
 }
 
-.pageChange ul{
+ul.pageChange {
 	display:flex;
 	justify-content: end;
 }
 
-.pageChange ul li{
+ul.pageChange li{
 	border: 1px solid #EAF0ED;
+	display:flex;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+ul.pageChange li a{
 	width: 60px;
 	height:60px;	
 	display:flex;
 	justify-content: center;
 	align-items: center ; 
 	font-size: 20px;
-	cursor: pointer;
 }
 
-.pageChange ul li:hover{
-	border: 1px solid #EAF0ED;
+ul.pageChange li:hover{
+	border: 1px solid #3F5D45;		
+}
+
+.pageChange .active a{
 	color:white;
-	background-color: #3F5D45;
+	background-color: #3F5D45;	
 }
 
-.pageChange ul li.noHover{
-	border: 1px solid #EAF0ED;
-	color:#3F5D45;
-	background-color: white;
-}
-
-.pageChange .active{
-	color:white;
-	background-color: #3F5D45;
-	
-}
 .footer{	
 	background-color: #3F5D45;
 	display: flex;
-	flex-direction: column;
-	
+	flex-direction: column;	
 }
 
 .subscribe{	
@@ -311,7 +316,7 @@ a {
 	margin-right:20px;
 }
 
-.footerLogo{
+.subscribeText{
 	font-family: 'PingFang TC';
 	width: 300px;
 	font-size: 24px;
@@ -329,7 +334,8 @@ a {
 .mailIcon{
 	display: flex;
 	flex-direction: column;
-	justify-content: center
+	justify-content: center;
+	padding:0px 10px;
 }
 
 .arrowIcon{ 
@@ -338,6 +344,7 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	cursor: pointer;
+	padding:0px 10px;
 }
 
 .footerInfo{
@@ -349,25 +356,20 @@ a {
 	justify-content: space-between;
 }
 
-.infoLeft{
+.infoAddress{
 	display: flex;
 	flex-direction: column;
-}
-
-.infoLeft div:first-child{
-	width: 277px;
-	padding: 39px 122px 115px 122px;
-
-}
-
-.infoLeft div{
-	width: 277px;
 	padding: 0px 122px 30px 122px;
 	font-family: 'Helvetica Neue';
 	font-size: 16px;
 	color:#3F5D45;
 	font-weight: 600;
 	line-height: 24px;
+}
+
+.footerLogo{
+	width: 277px;
+	padding: 39px 122px 115px 0px;
 }
 
 .footerLogo img{
@@ -378,7 +380,7 @@ a {
 	width:32px;
 }
 
-.infoRight{
+.infoCopyrightArea{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -390,7 +392,7 @@ a {
 }
 
 
-.infoRight div:first-child{
+.infoCopyrightArea .verticalWord{
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
 	color:#3F5D45;
