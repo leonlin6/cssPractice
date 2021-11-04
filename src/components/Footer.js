@@ -4,14 +4,15 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="subscribe">
-                <img alt="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg"></img>
+                <img className="subscribeLog" alt="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg"></img>
                 <p className="subscribeText">訂閱你我的甜蜜郵件</p>
                 <div className="mailInput">
                     <div className="mailIcon">
-                        <img alt="logo" style={{height:'24px', width:'24px', marginleft:'20px'}} src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/mail-24px.png"></img>                   
+                        <img alt="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/mail-24px.png"></img>                                           
                     </div>
+                    <input className="mailInput" type="text" placeholder="example@xxxx.ccom"></input>
                     <div className="arrowIcon">
-                        <img alt="logo" style={{height:'24px', width:'24px', marginleft:'20px'}} src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png"></img>                
+                        <img alt="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png"></img>                
                     </div>
                 </div>
             </div>

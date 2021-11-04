@@ -310,10 +310,9 @@ ul.pageChange li:hover{
 	align-items: center ; 
 }
 
-.subscribe img{ 	
+.subscribeLog{ 	
 	height:40px;
 	width: 40px;
-	margin-right:20px;
 }
 
 .subscribeText{
@@ -329,13 +328,29 @@ ul.pageChange li:hover{
 	background-color: #EAF0ED;
 	display: flex;
 	justify-content:space-between ;
+	border: none;
 
 }
+
+.mailInput:focus{
+	width:380px;
+	height:56px;
+	background-color: #EAF0ED;
+	outline: none;
+
+}
+
 .mailIcon{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding:0px 10px;
+}
+
+.mailIcon img{
+	height:'24px' ;
+	width:'24px' ;
+	padding-left:'20px';
 }
 
 .arrowIcon{ 
@@ -345,6 +360,12 @@ ul.pageChange li:hover{
 	justify-content: center;
 	cursor: pointer;
 	padding:0px 10px;
+}
+
+.arrowIcon img{
+	height:'24px' ;
+	width:'24px' ;
+	margin-left:'20px';
 }
 
 .footerInfo{
@@ -372,7 +393,7 @@ ul.pageChange li:hover{
 	padding: 39px 122px 115px 0px;
 }
 
-.footerLogo img{
+.subscribeLog{
 	width:171px;
 }
 
